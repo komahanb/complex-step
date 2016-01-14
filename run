@@ -1,0 +1,9 @@
+#rm *.o *.mod
+#gfortran -cpp -DUSE_COMPLEX -c scalar_class.f90  complex.f90 
+#gfortran -cpp -DUSE_COMPLEX scalar_class.o complex.o
+#./a.out
+
+rm *.o *.mod
+gfortran -cpp -c scalar_class.f90  complex.f90 
+gfortran -cpp  scalar_class.o complex.o
+./a.out
